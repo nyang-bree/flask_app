@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<form class="row g-3 p-3" action="/process_login" method="post">
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">email</label>
+      <input type="email" class="form-control" id="inputemail">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputpassword">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Confirm Password</label>
+      <input type="confirm_password" class="form-control" id="input_confirm_password">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">login</button>
+    </div>
+    <small> Not a member? <a class="text_warning" href="{{url_for('register')}}">Register</a></small>
+    
+    </form>
+    
+  {%endblock%}
